@@ -9,13 +9,15 @@
 
     <asp:UpdatePanel runat="server">
         <ContentTemplate>
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-4">
-                    <asp:TextBox ID="txtFiltro" CssClass="form-control" placeholder="Buscar" AutoPostBack="true"  runat="server" />
-                </div>
-                <div class="col-4">
-                    <asp:CheckBox Text="" ID="chkFiltroAvanzado" AutoPostBack="true" runat="server" />
-                    <label>Filtro Avanzado</label>
+            <div class="row d-flex justify-content-center">
+                <div class="d-flex contenedor-filtro-rapido align-items-center justify-content-center" style="width:920px; border:1px solid #ccc; gap:10px; padding:10px;">
+                    <div class="col-4">
+                        <asp:TextBox ID="txtFiltro" CssClass="form-control" placeholder="Buscar" AutoPostBack="true"  runat="server" />
+                    </div>
+                    <div class="col-4">
+                        <asp:CheckBox Text="" ID="chkFiltroAvanzado" AutoPostBack="true" runat="server" />
+                        <label>Filtro Avanzado</label>
+                    </div>
                 </div>
             </div>
         </ContentTemplate>

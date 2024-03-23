@@ -61,7 +61,7 @@
                                     <a class="nav-link" aria-current="page" href="Default.aspx">Home</a>
                                 </li>
                                 <li class="nav-item perfil mx-2">
-                                    <a class="nav-link" aria-current="page" href="#">Mi Perfil</a>
+                                    <a class="nav-link" aria-current="page" href="Perfil.aspx">Mi Perfil</a>
                                 </li>
                                 <li class="nav-item Favoritos mx-2">
                                     <a class="nav-link" aria-current="page" href="#">Favoritos</a>
@@ -86,7 +86,7 @@
                                         <img class="imagen-perfil" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="">
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-dark">
-                                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                        <li><a class="dropdown-item" href="Perfil.aspx">Perfil</a></li>
                                         <li><a class="dropdown-item" href="#">Favoritos</a></li>
                                         <li>
                                             <hr class="dropdown-divider">

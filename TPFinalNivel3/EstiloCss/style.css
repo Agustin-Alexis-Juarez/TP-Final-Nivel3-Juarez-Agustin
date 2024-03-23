@@ -188,3 +188,46 @@
 .txtLargo{
     width: 400px;
 }
+
+
+/* Perfil */
+
+.perfil__separador{
+    margin-top:200px;
+}
+
+.perfil__contenedor {
+    border: 1px solid #eaeaea;
+    margin: 120px auto;
+    box-shadow: 0px 0px 25px -17px rgba(0,0,0,0.35);
+}
+
+.perfil__titulo {
+    position: relative;
+    top: -45px;
+    right: -50px;
+    background-color: #fff;
+    width: 150px;
+    text-align: center;
+}
+
+.perfil__imagen-perfil {
+    margin-left: 50px;
+}
+
+@media(max-width:981px) {
+    .perfil__imagen-perfil {
+        justify-content: center;
+        margin: auto;
+    }
+}
+
+@media(max-width:766px) {
+    .perfil__datos {
+        align-items: center;
+    }
+
+    .perfil__separador{
+        margin-top:130px;
+    }
+}

@@ -42,7 +42,7 @@
                         </div>
 
                         <div class="mb-auto">
-                            <button class="boton-login btn btn-success">Registrar</button>
+                            <button class="boton-login btn btn-primary">Registrar</button>
                         </div>
                 
                <% } %>
