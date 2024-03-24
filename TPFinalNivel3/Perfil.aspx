@@ -14,7 +14,7 @@
                         <div class="col">
 
                             <div class="mb-3">
-                                <label for="">correo electrónico</label>
+                                <label for="">Correo electrónico</label>
                                 <input type="text" class="form-control">
                             </div>
                             <div class="mb-3">

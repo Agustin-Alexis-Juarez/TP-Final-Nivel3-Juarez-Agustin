@@ -13,7 +13,7 @@
                             <h1 class="login-titulo">Iniciar Sesión</h1>
                         </div>
                         <div class="mb-4">
-                            <label for="">Correo Electrónico</label>
+                            <label for="">Correo electrónico</label>
                             <input class="form-control txtLargo">
                         </div>
                         <div class="mb-auto">
