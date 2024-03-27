@@ -25,10 +25,6 @@
                                 <label for="">Apellido</label>
                                 <input type="text" class="form-control">
                             </div>
-                            <div class="mb-4">
-                                <label for="">Fecha de nacimientos</label>
-                                <input type="date" class="form-control">
-                            </div>
 
                         </div>
                         <div class="col">
