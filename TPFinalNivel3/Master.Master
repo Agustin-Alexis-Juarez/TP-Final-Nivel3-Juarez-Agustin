@@ -67,7 +67,7 @@
                                     <a class="nav-link" aria-current="page" href="#">Favoritos</a>
                                 </li>
                                 <li class="nav-item lista mx-2">
-                                    <a class="nav-link " aria-current="page" href="#">Lista Artículos</a>
+                                    <a class="nav-link " aria-current="page" href="ListaArticulos.aspx">Lista Artículos</a>
                                 </li>
                                 <li class="nav-item agregar mx-2">
                                     <a class="nav-link" aria-current="page" href="AgregarArticulo.aspx">Agregar Articulo</a>

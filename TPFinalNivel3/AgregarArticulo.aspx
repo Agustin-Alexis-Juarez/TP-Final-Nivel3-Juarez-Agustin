@@ -31,7 +31,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="">Marca</label>
-                            <input type="" class="form-control">
+                            <input type="text" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label for="">Categoria</label>
@@ -55,7 +55,7 @@
                 <div class="row agregar-articulo__btn">
                     <div class="mb-3">
                         <button class="btn btn-primary py-2 px-4 rounded-1">Guardar</button>
-                        <a href="#">Cancelar</a>
+                        <a href="ListaArticulos.aspx">Cancelar</a>
                     </div>
                 </div>
             </div>
