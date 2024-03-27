@@ -11,7 +11,10 @@ namespace TPFinalNivel3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["error"].ToString() != null)
+            {
+                lblError.Text = Session["error"].ToString();
+            }
         }
     }
 }
