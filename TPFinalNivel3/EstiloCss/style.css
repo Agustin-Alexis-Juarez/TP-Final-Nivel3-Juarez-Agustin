@@ -212,6 +212,8 @@
 }
 
 .perfil__imagen-perfil {
+    object-fit: contain;
+    width: 18rem;
     margin-left: 50px;
 }
 
@@ -245,6 +247,12 @@
     background-color: #fff;
     width: 18rem;
     text-align: center;
+}
+
+.agregar-articulo__imagen{
+    object-fit: contain;
+    height:250px;
+    margin: auto;
 }
 
 @media(max-width:768px) {
