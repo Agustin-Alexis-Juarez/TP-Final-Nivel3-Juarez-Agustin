@@ -7,7 +7,7 @@
 
     <div class="perfil__contenedor py-4 px-4">
             <div class="agregar-articulo__titulo">
-                <h1>Agregar articulo</h1>
+                <h1 id="h1AgregarArticulo" runat="server">Agregar articulo</h1>
             </div>
             <div class="perfil__datos d-flex container-fluid flex-column">
                 <div class="row agregar-articulo__datos-imagen">
@@ -59,11 +59,36 @@
                
                 </div>
                 <div class="row agregar-articulo__btn">
+                    <div class="col">
                     <div class="mb-3">
-                        <asp:Button Text="Guardar" CssClass="btn btn-primary py-2 px-4 rounded-1" ID="btnAgregar" OnClick="btnAgregar_Click" runat="server" />
+                        <asp:Button Text="Agregar" CssClass="btn btn-primary py-2 px-4 rounded-1" ID="btnAgregar" OnClick="btnAgregar_Click" runat="server" />
                         <a href="ListaArticulos.aspx">Cancelar</a>
                     </div>
+                    </div>
                 </div>
+                <%if (Request.QueryString["id"] != null){%>
+                    <asp:UpdatePanel runat="server">
+                        <ContentTemplate>
+                            <div class="row agregar-articulo__contenedor-eliminar d-flex flex-row align-items-center">
+                                <div class="col-4">
+                                    <div class="mb-2">
+                                        <asp:Button Text="Eliminar" ID="btnEliminar" CssClass="btn btn-outline-danger py-2 px-4 agregar-articulo__btnEliminar" OnClick="btnEliminar_Click" runat="server" />
+                                    </div>
+                                </div>
+                                <%if (ActivarEliminacion)
+                                    { %>
+                                        <div class="agregar-articulo__confirmar-eliminacion py-1 d-flex flex-column text-center">
+                                            ¿Seguro que quiere eliminar este articulo?
+                                            <div>
+                                                <asp:Button ID="btnSiEliminar" Text="Si" CssClass="btn-outline-dark" OnClick="btnSiEliminar_Click" runat="server" style="padding-inline:12px" /> <asp:Button ID="btnCancelarEliminar" Text="No" CssClass=" btn-outline-dark px-2" OnClick="btnCancelarEliminar_Click" runat="server" />
+                                            </div>
+                                        </div>
+                                   <% } %>
+                            </div>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    
+                <% } %>
             </div>
        </div>
 

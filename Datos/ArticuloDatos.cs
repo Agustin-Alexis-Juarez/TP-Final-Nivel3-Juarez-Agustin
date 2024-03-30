@@ -12,14 +12,19 @@ namespace Datos
 {
     public class ArticuloDatos
     {
-        public List<Articulo> Listar()
+        public List<Articulo> Listar(string id = "")
         {
             List<Articulo> lista = new List<Articulo>();
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta("select A.Id,Codigo, Nombre, A.Descripcion, M.Descripcion Marca, M.Id idmarca, C.Id idcat, C.Descripcion Categoria, ImagenUrl, Precio from ARTICULOS A, CATEGORIAS C, MARCAS M where IdMarca = M.Id and IdCategoria = C.Id");
+                string consulta = "select A.Id,Codigo, Nombre, A.Descripcion, M.Descripcion Marca, M.Id idmarca, C.Id idcat, C.Descripcion Categoria, ImagenUrl, Precio from ARTICULOS A, CATEGORIAS C, MARCAS M where IdMarca = M.Id and IdCategoria = C.Id ";
+                if(id != "")
+                {
+                    consulta += "and A.Id = " + id;
+                }
+                datos.setearConsulta(consulta);
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
