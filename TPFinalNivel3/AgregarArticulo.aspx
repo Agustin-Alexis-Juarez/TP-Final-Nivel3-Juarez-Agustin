@@ -48,7 +48,6 @@
                                 <div class="mb-3">
                                     <label>Imagen:</label>
                                     <asp:TextBox ID="txtUrlImagen" CssClass="form-control" AutoPostBack="true" OnTextChanged="txtUrlImagen_TextChanged" runat="server" />
-                               
                                 </div>
                                 <div class="d-flex mb-3">
                                     <asp:Image ID="imgArticulo" ImageUrl="https://editorial.unc.edu.ar/wp-content/uploads/sites/33/2022/09/placeholder.png" CssClass="img-fluid mb-3 agregar-articulo__imagen" runat="server" />
@@ -66,7 +65,8 @@
                     </div>
                     </div>
                 </div>
-                <%if (Request.QueryString["id"] != null){%>
+                <%if (Request.QueryString["id"] != null){
+%>
                     <asp:UpdatePanel runat="server">
                         <ContentTemplate>
                             <div class="row agregar-articulo__contenedor-eliminar d-flex flex-row align-items-center">

@@ -8,27 +8,36 @@
 
 
     <div class="row">
-            <asp:UpdatePanel runat="server">
-                <ContentTemplate>
-                     <div class="d-flex  align-items-center justify-content-center" style="max-width:900px; gap: 10px; padding: 10px; margin-left:10px;">
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <asp:TextBox ID="txtFiltroRapido" AutoPostBack="true" OnTextChanged="txtFiltroRapido_TextChanged" placeholder="Buscar" CssClass="form-control" runat="server" />
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <asp:CheckBox Text="" ID="chkFiltroAvanzado" AutoPostBack="true" runat="server" />
-                                <label>Filtro avanzado</label>
-                            </div>
+        <asp:UpdatePanel runat="server">
+            <ContentTemplate>
+                <div class="d-flex  align-items-center justify-content-center" style="max-width: 900px; gap: 10px; padding: 10px; margin-left: 10px;">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <% if (chkFiltroAvanzado.Checked) {%>
+                                    
+                                    <asp:TextBox ID="txtFiltroAvanzado" AutoPostBack="false" OnTextChanged="txtFiltro_TextChanged" placeholder="Buscar" CssClass="form-control" runat="server" />
+
+                                <%} else {%> 
+
+                                     <asp:TextBox ID="txtFiltro" AutoPostBack="true" OnTextChanged="txtFiltro_TextChanged" placeholder="Buscar" CssClass="form-control" runat="server" />
+
+                                 <%}%>
+
                         </div>
                     </div>
-                </ContentTemplate>
-            </asp:UpdatePanel>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <asp:CheckBox Text="" ID="chkFiltroAvanzado" OnCheckedChanged="chkFiltroAvanzado_CheckedChanged" AutoPostBack="true" runat="server" />
+                            <label>Filtro avanzado</label>
+                        </div>
+                    </div>
+                </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>
     </div>
 
     <div class="row">
-         <asp:UpdatePanel runat="server">
+        <asp:UpdatePanel runat="server">
             <ContentTemplate>
                 <%if (chkFiltroAvanzado.Checked)
                     { %>
@@ -41,22 +50,7 @@
                                 <asp:ListItem Text="Nombre" />
                                 <asp:ListItem Text="Precio" />
                                 <asp:ListItem Text="Codigo de Articulo" />
-                            </asp:DropDownList>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="mb-3">
-                            <label>Marca</label>
-                            <asp:DropDownList ID="ddlMarca" CssClass="form-select" runat="server">
-                                <asp:ListItem Text="Todas" />
-                            </asp:DropDownList>
-                        </div>
-                    </div>
-                     <div class="col-3">
-                        <div class="mb-3">
-                            <label>Categoria</label>
-                            <asp:DropDownList ID="ddlCategoria" CssClass="form-select" runat="server">
-                                <asp:ListItem Text="Todas" />
+                                <asp:ListItem Text="Solo Marca/Categoria" />
                             </asp:DropDownList>
                         </div>
                     </div>
@@ -67,6 +61,20 @@
                                 <asp:ListItem Text="Contiene" />
                                 <asp:ListItem Text="Comienza con" />
                                 <asp:ListItem Text="Termina con" />
+                            </asp:DropDownList>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="mb-3">
+                            <label>Marca</label>
+                            <asp:DropDownList ID="ddlMarca" CssClass="form-select" runat="server">
+                            </asp:DropDownList>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="mb-3">
+                            <label>Categoria</label>
+                            <asp:DropDownList ID="ddlCategoria" CssClass="form-select" runat="server">
                             </asp:DropDownList>
                         </div>
                     </div>
@@ -84,30 +92,7 @@
         </asp:UpdatePanel>
     </div>
 
-    <%--  <div class="row">
-         <div class="col-6">
-            <asp:UpdatePanel runat="server">
-                <ContentTemplate>
-                    <div class="mb-3">
-                        <label>Filtro</label>
-                        <asp:TextBox ID="txtFiltroRapido" AutoPostBack="true" OnTextChanged="txtFiltroRapido_TextChanged" CssClass="form-control" runat="server" />
-                    </div>
-                </ContentTemplate>
-            </asp:UpdatePanel>
-        </div>
 
-        <div class="col-6" style="display: flex; flex-direction: column;">
-            <asp:UpdatePanel runat="server">
-                <ContentTemplate>
-                    <div class="mb-3">
-                        <asp:CheckBox Text="" ID="chkFiltroAvanzado" OnCheckedChanged="chkFiltroAvanzado_CheckedChanged" AutoPostBack="true" runat="server" />
-                        <label>Filtro avanzado</label>
-                    </div>
-                </ContentTemplate>
-            </asp:UpdatePanel>
-        </div>
-
-    </div>--%>
 
     <asp:UpdatePanel runat="server">
         <ContentTemplate>
@@ -117,8 +102,9 @@
                     OnSelectedIndexChanged="dgvListaArticulos_SelectedIndexChanged"
                     AllowPaging="true" OnPageIndexChanging="dgvListaArticulos_PageIndexChanging" PageSize="6" runat="server">
                     <Columns>
+                        <asp:BoundField HeaderText="Codigo" DataField="CodigoArticulo" />
                         <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
-                        <asp:BoundField HeaderText="Precio" DataField="Precio" />
+                        <asp:BoundField HeaderText="Precio" DataField="Precio" DataFormatString="{0:F2}" />
                         <asp:BoundField HeaderText="Marca" DataField="Marca.Descripcion" />
                         <asp:BoundField HeaderText="Categoria" DataField="Categoria.Descripcion" />
                         <asp:CommandField HeaderText="Modificar" SelectText="✍️" ShowSelectButton="true" />

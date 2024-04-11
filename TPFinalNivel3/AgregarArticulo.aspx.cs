@@ -66,8 +66,9 @@ namespace TPFinalNivel3
 						txtUrlImagen.Text = articulo[0].ImagenUrl;
 						ddlMarca.SelectedValue = articulo[0].Marca.Id.ToString();
 						ddlCategoria.SelectedValue = articulo[0].Categoria.Id.ToString();
+						txtUrlImagen_TextChanged(sender, e);
 
-					}
+                    }
 
 
 				}
