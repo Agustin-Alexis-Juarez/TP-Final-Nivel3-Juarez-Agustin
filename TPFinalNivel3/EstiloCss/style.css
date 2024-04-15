@@ -36,6 +36,10 @@
     padding: 5px;
 }
 
+.iniciar-registrar{
+    display: none;
+}
+
 .logo {
     margin-left: 20px;
     color: #999;
@@ -107,6 +111,9 @@
     .agregar {
         display: block;
         font-size: 1.5rem;
+    }
+    .iniciar-registrar{
+        display: block;
     }
 }
     /*Cards*/
@@ -186,8 +193,9 @@
 }
 
 .txtLargo{
-    width: 400px;
+    width: 23rem;
 }
+
 
 
 /* Perfil */

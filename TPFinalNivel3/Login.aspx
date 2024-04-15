@@ -3,12 +3,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    
 
     <div class="row row-login d-flex align-items-center justify-content-center">
             <div class="tarjeta-login py-3 d-flex flex-column align-items-center rounded-3">
 
-                <%if (Request.QueryString["b"] == "1")
+                <%if (Request.QueryString["L"] == "1")
                     { %>
+                    
                         <div class="mb-auto">
                             <h1 class="login-titulo">Iniciar Sesión</h1>
                         </div>

@@ -75,6 +75,7 @@ namespace TPFinalNivel3
             if (Session["listaFiltradaAvanzada"] != null && chkFiltroAvanzado.Checked)
             {
                 dgvListaArticulos.DataSource = Session["listaFiltradaAvanzada"];
+
             } else if (Session["listaFiltrada"] != null && !chkFiltroAvanzado.Checked && !string.IsNullOrEmpty(txtFiltro.Text))
             {
                 dgvListaArticulos.DataSource = Session["listaFiltrada"];
@@ -110,6 +111,7 @@ namespace TPFinalNivel3
 
                 ddlCriterio.Enabled = false;
                 txtFiltroAvanzado.Enabled = false;
+                txtFiltroAvanzado.Text = "";
                 ddlCriterio.Items.Clear();
 
             } else
