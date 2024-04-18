@@ -76,6 +76,7 @@
     <Content Include="ListaArticulos.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Perfil.aspx" />
+    <Content Include="Registrar.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +133,14 @@
       <DependentUpon>Perfil.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registrar.aspx.cs">
+      <DependentUpon>Registrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registrar.aspx.designer.cs">
+      <DependentUpon>Registrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master.Master" />

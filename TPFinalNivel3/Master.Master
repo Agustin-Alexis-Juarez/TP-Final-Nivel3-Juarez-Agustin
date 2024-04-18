@@ -112,16 +112,16 @@
                                     <%} else
                                        { %>
                                               <div class="d-flex justify-content-center flex-column flex-lg-row align-items-center gap-2">
-                                                  <a href="Login.aspx?L=1" class="iniciar-registrar text-white text-decoration-none px-3 py-2 bg-success rounded-5">Iniciar Sesión</a>
-                                                  <a href="Login.aspx?" class="iniciar-registrar text-white text-decoration-none px-4 py-2 bg-primary rounded-5">Registrarse</a>
+                                                  <a href="Login.aspx" class="iniciar-registrar text-white text-decoration-none px-3 py-2 bg-success rounded-5">Iniciar Sesión</a>
+                                                  <a href="Registrar.aspx" class="iniciar-registrar text-white text-decoration-none px-4 py-2 bg-primary rounded-5">Registrarse</a>
                                                  <div class="dropdown">
                                                     <button class="boton-foto d-flex justify-content-center align-items-center gab-2 dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                         <p class="nombre">Iniciar Sesión/Registrarse</p>
                                                        
                                                     </button>
                                                     <ul class="dropdown-menu dropdown-menu-dark">
-                                                        <li><a class="dropdown-item" href="Login.aspx?L=1">Iniciar Sesión</a></li>
-                                                        <li><a class="dropdown-item" href="Login.aspx">Registrarse</a></li>
+                                                        <li><a class="dropdown-item" href="Login.aspx">Iniciar Sesión</a></li>
+                                                        <li><a class="dropdown-item" href="Registrar.aspx">Registrarse</a></li>
                                                     </ul>
                                                 </div>
                                               </div>

@@ -13,5 +13,10 @@ namespace TPFinalNivel3
         {
 
         }
+
+        protected void btnIngresar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

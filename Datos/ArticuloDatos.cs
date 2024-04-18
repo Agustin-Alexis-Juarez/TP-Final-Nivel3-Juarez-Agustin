@@ -207,6 +207,10 @@ namespace Datos
 
                 throw ex;
             }
+            finally
+            {
+                datos.cerrarConexion();
+            }
 
         }
 
