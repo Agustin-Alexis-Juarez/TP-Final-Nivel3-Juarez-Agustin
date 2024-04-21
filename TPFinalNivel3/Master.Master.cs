@@ -12,7 +12,14 @@ namespace TPFinalNivel3
         public bool IniciarSesion { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            IniciarSesion = false;
+            if(!(Page is Login || Page is Default || Page is Registrar))
+            {
+                if (!Seguridad.sesionActiva(Session["usuario"]))
+                    Response.Redirect("Login.aspx", false);
+                
+            }
+            if (Seguridad.sesionActiva(Session["usuario"]))
+                IniciarSesion = true;
         }
     }
 }

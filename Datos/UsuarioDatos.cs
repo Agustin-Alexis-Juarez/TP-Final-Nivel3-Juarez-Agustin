@@ -62,7 +62,7 @@ namespace Datos
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("Select Id, email, pass, admin, urlImagenPerfil, nombre, apellido,  from USERS where email = @correo And pass = @contraseña");
+                datos.setearConsulta("Select Id, email, pass, admin, urlImagenPerfil, nombre, apellido from USERS where email = @correo And pass = @contraseña");
                 datos.setearParametros("@correo", usuario.Email);
                 datos.setearParametros("@contraseña", usuario.Contraseña);
                 datos.ejecutarLectura();
@@ -77,8 +77,8 @@ namespace Datos
                     if (!(datos.Lector["apellido"] is DBNull))
                         usuario.Apellido = (string)datos.Lector["apellido"];
 
-                    if (!(datos.Lector["imagenPerfil"] is DBNull))
-                        usuario.UrlImagen = (string)datos.Lector["imagenPerfil"];
+                    if (!(datos.Lector["urlImagenPerfil"] is DBNull))
+                        usuario.UrlImagen = (string)datos.Lector["urlImagenPerfil"];
 
                    
              

@@ -14,11 +14,11 @@
             </div>
             <div class="mb-4">
                 <label for="">Correo electrónico</label>
-                <input class="form-control txtLargo">
+                <asp:TextBox CssClass="form-control txtLargo" ID="txtCorreo" runat="server" />
             </div>
             <div class="mb-auto">
                 <label for="">Contraseña</label>
-                <input class="form-control txtLargo">
+                <asp:TextBox CssClass="form-control txtLargo" ID="txtContraseña" runat="server" />
             </div>
 
             <div class="mb-auto">
