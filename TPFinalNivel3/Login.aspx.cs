@@ -13,7 +13,14 @@ namespace TPFinalNivel3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!IsPostBack)
+            {
+                if (Seguridad.sesionActiva((Usuario)Session["usuario"]))
+                {
+                    Response.Redirect("./", false);
+                }
+                    
+            }
         }
 
         protected void btnIngresar_Click(object sender, EventArgs e)

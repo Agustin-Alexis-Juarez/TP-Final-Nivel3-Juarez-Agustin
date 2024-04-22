@@ -14,15 +14,22 @@
     height: 66px;
 }
 
-.imagen-perfil {
+.imagen-perfil-default {
     object-fit: contain;
     width: 35px;
-    border-radius: 50%;
+    height: 35px;
+    clip-path: circle(50%);
     background-color: rgb(239, 237, 236);
     padding: 5px;
     margin-left: 4px;
 }
-
+.imagen-perfil {
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    clip-path: circle(50%);
+    margin-left: 4px;
+}
 .nombre {
     margin: auto;
     color: #fff;
@@ -38,6 +45,12 @@
 
 .iniciar-registrar{
     display: none;
+}
+
+.btn-cerrar-sesion{
+    background:none !important;
+    border: none;
+    color: #fff;
 }
 
 .logo {
@@ -72,6 +85,9 @@
 
 .agregar {
     display: none;
+}
+.btnCerrarSesion{
+    display:none;
 }
 /*navbar responsive*/
 @media(max-width: 991px) {
@@ -114,6 +130,9 @@
     }
     .iniciar-registrar{
         display: block;
+    }
+    .btnCerrarSesion{
+        display:block;
     }
 }
     /*Cards*/
@@ -220,8 +239,10 @@
 }
 
 .perfil__imagen-perfil {
-    object-fit: contain;
-    width: 18rem;
+    clip-path: circle(50%);
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
     margin-left: 50px;
 }
 
