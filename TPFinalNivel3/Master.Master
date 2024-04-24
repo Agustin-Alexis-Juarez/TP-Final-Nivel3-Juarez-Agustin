@@ -47,7 +47,7 @@
                             %>
 
                             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                                <asp:Image CssClass="imagen-perfil" ID="imgAvatarMovil" ImageUrl="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" runat="server" />
+                                <asp:Image CssClass="imagen-perfil-default" ID="imgAvatarMovil" ImageUrl="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" runat="server" />
                                 <asp:Label Text="" ID="lblNombreMovil" runat="server" />
                             </h5>
                             <%}
@@ -75,7 +75,7 @@
                                     <a class="nav-link" aria-current="page" href="Perfil.aspx">Mi Perfil</a>
                                 </li>
                                 <li class="nav-item Favoritos mx-2">
-                                    <a class="nav-link" aria-current="page" href="#">Favoritos</a>
+                                    <a class="nav-link" aria-current="page" href="Favoritos.aspx">Favoritos</a>
                                 </li>
                                 <%if (TPFinalNivel3.Seguridad.esAdmin(Session["usuario"]))
                                     { %>
@@ -96,14 +96,9 @@
                                 <div class="dropdown">
                                     <button class="boton-foto d-flex justify-content-center align-items-center gab-2 dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 60px;">
                                         <asp:Label Text="" ID="lblNombre" CssClass="nombre" runat="server" />
-                                     <%   if(imgAvatar.ImageUrl == "https://cdn-icons-png.flaticon.com/512/1077/1077114.png")
-                                        {%>
-                                            
-                                            <asp:Image CssClass="imagen-perfil-default" ImageUrl="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" runat="server" />
-                                       <% }else
-                                        {%>
-                                             <asp:Image ID="imgAvatar" CssClass="imagen-perfil" ImageUrl="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" runat="server" />
-                                        <% }%>
+                                      
+                                        <asp:Image ID="imgAvatar" CssClass="imagen-perfil-default" ImageUrl="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" runat="server" />
+                                       
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-dark">
                                         <li><a class="dropdown-item" href="Perfil.aspx">Perfil</a></li>

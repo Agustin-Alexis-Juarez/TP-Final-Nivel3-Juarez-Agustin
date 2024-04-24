@@ -44,8 +44,15 @@ namespace TPFinalNivel3
                 }
                 if (usuario.UrlImagen != null)
                 {
+
                     imgAvatarMovil.ImageUrl = "~/Imagenes/Perfil/" + usuario.UrlImagen;
+                    imgAvatarMovil.CssClass.Remove(0);
+                    imgAvatarMovil.CssClass = "imagen-perfil";
+
                     imgAvatar.ImageUrl = "~/Imagenes/Perfil/" + usuario.UrlImagen;
+                    imgAvatar.CssClass.Remove(0);
+                    imgAvatar.CssClass = "imagen-perfil";
+
 
                 }
             }
