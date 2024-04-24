@@ -25,10 +25,12 @@
                     <div class="mb-3">
                         <label for="">Nombre</label>
                         <asp:TextBox CssClass="form-control" ID="txtNombre" runat="server" />
+                        <asp:RequiredFieldValidator ErrorMessage="El nombre es requerido." ControlToValidate="txtNombre" ForeColor="Red" runat="server" />
                     </div>
                     <div class="mb-3">
                         <label for="">Apellido</label>
                         <asp:TextBox CssClass="form-control" ID="txtApellido" runat="server" />
+                        <asp:RequiredFieldValidator ErrorMessage="El Apellido es requerido." ControlToValidate="txtApellido" ForeColor="Red" runat="server" />
                     </div>
 
                 </div>

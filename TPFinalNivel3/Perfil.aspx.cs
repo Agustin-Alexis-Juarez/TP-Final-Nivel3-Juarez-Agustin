@@ -50,6 +50,11 @@ namespace TPFinalNivel3
         {
             try
             {
+                Page.Validate();
+                if(!Page.IsValid)
+                    return;
+                
+
                 Usuario usuario = (Usuario)Session["usuario"];
                 UsuarioDatos datos = new UsuarioDatos();
 

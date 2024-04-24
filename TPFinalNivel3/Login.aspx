@@ -18,7 +18,7 @@
             </div>
             <div class="mb-auto">
                 <label for="">Contraseña</label>
-                <asp:TextBox CssClass="form-control txtLargo" ID="txtContraseña" runat="server" />
+                <asp:TextBox CssClass="form-control txtLargo" ID="txtContraseña" runat="server" TextMode="Password" />
             </div>
 
             <div class="mb-auto">

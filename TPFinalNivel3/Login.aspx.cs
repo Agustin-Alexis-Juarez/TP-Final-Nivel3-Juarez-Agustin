@@ -13,13 +13,13 @@ namespace TPFinalNivel3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 if (Seguridad.sesionActiva((Usuario)Session["usuario"]))
                 {
                     Response.Redirect("./", false);
                 }
-                    
+
             }
         }
 
@@ -29,13 +29,18 @@ namespace TPFinalNivel3
             Usuario usuario = new Usuario();
             try
             {
-                usuario.Email = txtCorreo.Text;
-                usuario.Contraseña = txtContraseña.Text;
+                if (!(string.IsNullOrEmpty(txtCorreo.Text) || string.IsNullOrEmpty(txtContraseña.Text)))
+                {
+
+                }
+                    usuario.Email = txtCorreo.Text;
+                    usuario.Contraseña = txtContraseña.Text;
                 if (datos.login(usuario))
                 {
                     Session.Add("usuario", usuario);
-                    Response.Redirect("Perfil.aspx", false);
-                } else
+                    Response.Redirect("Default.aspx", false);
+                }
+                else
                 {
                     Session.Add("error", "Correo Electrónico o contraseña incorrectos.");
                     Response.Redirect("Error.aspx", false);

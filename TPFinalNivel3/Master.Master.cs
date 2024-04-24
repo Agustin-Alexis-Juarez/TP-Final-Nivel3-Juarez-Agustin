@@ -52,6 +52,7 @@ namespace TPFinalNivel3
                     imgAvatar.ImageUrl = "~/Imagenes/Perfil/" + usuario.UrlImagen;
                     imgAvatar.CssClass.Remove(0);
                     imgAvatar.CssClass = "imagen-perfil";
+                    
 
 
                 }

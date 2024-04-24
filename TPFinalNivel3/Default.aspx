@@ -15,7 +15,7 @@
                 <ItemTemplate>
                     <div class="col mb-4">
                         <div class="card sombra-card h-100" style="width: 18rem; margin: 0 auto;">
-                            <img src="<%#Eval("ImagenUrl") %>" alt="<%#Eval("Nombre") %>" class="card-img-top imagen-card" />
+                            <img src="<%#Eval("ImagenUrl") %>" alt="<%#Eval("Nombre") %>" onerror="this.onerror=null; this.src='https://www.sennheiser.com/images/placeholder.raw.svg'" class="card-img-top imagen-card" />
                             <div class="card-body">
                                 <h3 class="card-title"><%#Eval("Nombre") %></h3>
                                 <div class="cont-precio mb-2">

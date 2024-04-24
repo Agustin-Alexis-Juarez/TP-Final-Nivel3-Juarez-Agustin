@@ -19,15 +19,15 @@
                         </div>
                         <div class="mb-3">
                             <label for="txtCodigoArticulo">Codigo de Articulo:</label>
-                            <asp:TextBox ID="txtCodigoArticulo" CssClass="form-control" runat="server" />
+                            <asp:TextBox ID="txtCodigoArticulo" CssClass="form-control" runat="server" MaxLength="50" />
                         </div>
                         <div class="mb-3">
                             <label for="txtNombre">Nombre:</label>
-                            <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server" />
+                            <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server" MaxLength="50" />
                         </div>
                         <div class="mb-3">
                             <label for="txtDescripcion">Descripción:</label>
-                            <asp:TextBox ID="txtDescripcion" CssClass="form-control" runat="server" />
+                            <asp:TextBox ID="txtDescripcion" CssClass="form-control" runat="server" MaxLength="150" />
                         </div>
                         <div class="mb-3">
                             <label for="ddlMarca">Marca:</label>
@@ -47,10 +47,10 @@
                         <ContentTemplate>
                                 <div class="mb-3">
                                     <label>Imagen:</label>
-                                    <asp:TextBox ID="txtUrlImagen" CssClass="form-control" AutoPostBack="true" OnTextChanged="txtUrlImagen_TextChanged" runat="server" />
+                                    <asp:TextBox ID="txtUrlImagen" CssClass="form-control" AutoPostBack="true" OnTextChanged="txtUrlImagen_TextChanged" runat="server" MaxLength="1000" />
                                 </div>
                                 <div class="d-flex mb-3">
-                                    <asp:Image ID="imgArticulo" ImageUrl="https://editorial.unc.edu.ar/wp-content/uploads/sites/33/2022/09/placeholder.png" CssClass="img-fluid mb-3 agregar-articulo__imagen" runat="server" />
+                                    <asp:Image ID="imgArticulo" CssClass="img-fluid mb-3 agregar-articulo__imagen" runat="server" />
                                 </div>
                         </ContentTemplate>
                     </asp:UpdatePanel>
