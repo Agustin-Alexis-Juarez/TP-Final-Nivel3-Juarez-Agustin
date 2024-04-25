@@ -40,6 +40,7 @@
                         <div class="mb-3">
                             <label for="txtPrecio">Precio:</label>
                             <asp:TextBox ID="txtPrecio" CssClass="form-control"  runat="server" />
+                            <asp:RegularExpressionValidator ErrorMessage="Solo números." ControlToValidate="txtPrecio" ForeColor="Red" ValidationExpression="^[0-9]+$" runat="server" />
                         </div>
                     </div>
                             <div class="col">

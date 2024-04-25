@@ -88,6 +88,11 @@ namespace TPFinalNivel3
 
 			try
 			{
+
+				Page.Validate();
+				if (!Page.IsValid)
+					return;
+
 				//agregar articulo nuevo
 
 				Articulo nuevoArticulo = new Articulo();

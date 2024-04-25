@@ -19,7 +19,8 @@ namespace TPFinalNivel3
                 {
                     Response.Redirect("./", false);
                 }
-
+                
+                
             }
         }
 
@@ -27,6 +28,10 @@ namespace TPFinalNivel3
         {
             try
             {
+                Page.Validate();
+                if (!Page.IsValid)
+                    return;
+
                 UsuarioDatos usuarioDatos = new UsuarioDatos();
                 Usuario usuarioNuevo = new Usuario();
 

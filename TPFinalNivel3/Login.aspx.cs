@@ -29,10 +29,10 @@ namespace TPFinalNivel3
             Usuario usuario = new Usuario();
             try
             {
-                if (!(string.IsNullOrEmpty(txtCorreo.Text) || string.IsNullOrEmpty(txtContraseña.Text)))
-                {
+                Page.Validate();
+                if (!Page.IsValid)
+                    return;
 
-                }
                     usuario.Email = txtCorreo.Text;
                     usuario.Contraseña = txtContraseña.Text;
                 if (datos.login(usuario))
