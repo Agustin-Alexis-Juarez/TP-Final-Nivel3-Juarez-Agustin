@@ -15,6 +15,7 @@ namespace TPFinalNivel3
             {
                 lblError.Text = Session["error"].ToString();
             }
+           
         }
     }
 }

@@ -7,7 +7,7 @@
 
     <div class="perfil__contenedor py-4 px-4">
             <div class="agregar-articulo__titulo">
-                <h1 id="h1AgregarArticulo" runat="server">Agregar articulo</h1>
+                <h1 id="h1AgregarArticulo" runat="server">Agregar artículo</h1>
             </div>
             <div class="perfil__datos d-flex container-fluid flex-column">
                 <div class="row agregar-articulo__datos-imagen">
@@ -18,12 +18,14 @@
                             <asp:TextBox ID="txtId" CssClass="form-control" runat="server" />
                         </div>
                         <div class="mb-3">
-                            <label for="txtCodigoArticulo">Codigo de Articulo:</label>
+                            <label for="txtCodigoArticulo">Código de Artículo:</label>
                             <asp:TextBox ID="txtCodigoArticulo" CssClass="form-control" runat="server" MaxLength="50" />
+                            <asp:RequiredFieldValidator ErrorMessage="El código de artículo no puede quedar vacío." ControlToValidate="txtCodigoArticulo" ForeColor="Red" Display="Dynamic" runat="server" />
                         </div>
                         <div class="mb-3">
                             <label for="txtNombre">Nombre:</label>
                             <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server" MaxLength="50" />
+                            <asp:RequiredFieldValidator ErrorMessage="El nombre no puede quedar vacío." ControlToValidate="txtNombre" ForeColor="Red" runat="server" Display="Dynamic" />
                         </div>
                         <div class="mb-3">
                             <label for="txtDescripcion">Descripción:</label>
@@ -34,13 +36,14 @@
                             <asp:DropDownList  id="ddlMarca" CssClass="form-select" runat="server"></asp:DropDownList>
                         </div>
                         <div class="mb-3">
-                            <label for="ddlCategoria">Categoria:</label>
+                            <label for="ddlCategoria">Categoría:</label>
                             <asp:DropDownList ID="ddlCategoria" CssClass="form-select" runat="server"></asp:DropDownList>
                         </div>
                         <div class="mb-3">
                             <label for="txtPrecio">Precio:</label>
                             <asp:TextBox ID="txtPrecio" CssClass="form-control"  runat="server" />
-                            <asp:RegularExpressionValidator ErrorMessage="Solo números." ControlToValidate="txtPrecio" ForeColor="Red" ValidationExpression="^[0-9]+$" runat="server" />
+                            <asp:RequiredFieldValidator ErrorMessage="No puede quedar vacío." ControlToValidate="txtPrecio" ForeColor="Red" Display="Dynamic" runat="server" />
+                            <asp:RegularExpressionValidator ErrorMessage="Solo se permiten números sin punto." ControlToValidate="txtPrecio" ForeColor="Red" ValidationExpression="^[0-9]+(,[0-9]+)?$" runat="server" Display="Dynamic" />
                         </div>
                     </div>
                             <div class="col">
@@ -79,7 +82,7 @@
                                 <%if (ActivarEliminacion)
                                     { %>
                                         <div class="agregar-articulo__confirmar-eliminacion py-1 d-flex flex-column text-center">
-                                            ¿Seguro que quiere eliminar este articulo?
+                                            ¿Seguro que quiere eliminar este artículo?
                                             <div>
                                                 <asp:Button ID="btnSiEliminar" Text="Si" CssClass="btn-outline-dark" OnClick="btnSiEliminar_Click" runat="server" style="padding-inline:12px" /> <asp:Button ID="btnCancelarEliminar" Text="No" CssClass=" btn-outline-dark px-2" OnClick="btnCancelarEliminar_Click" runat="server" />
                                             </div>

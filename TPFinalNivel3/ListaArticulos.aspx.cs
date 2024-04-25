@@ -140,7 +140,11 @@ namespace TPFinalNivel3
                 
                 if (campo == "Precio")
                 {
-                        if(string.IsNullOrEmpty(txtFiltroAvanzado.Text))
+                    Page.Validate();
+                    if (!Page.IsValid)
+                        return;
+
+                    if (string.IsNullOrEmpty(txtFiltroAvanzado.Text))
                         {
                             Session.Remove("listaFiltradaAvanzada");
                             return;

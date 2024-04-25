@@ -14,8 +14,14 @@
                     <div class="col-6">
                         <div class="mb-3">
                             <% if (chkFiltroAvanzado.Checked) {%>
+                            
+                                        <asp:TextBox ID="txtFiltroAvanzado" AutoPostBack="false" OnTextChanged="txtFiltro_TextChanged" placeholder="Buscar" CssClass="form-control" runat="server" />
+
+                                    <%if(ddlCampo.SelectedItem.ToString() == "Precio")
+                                    { %>
+                                        <asp:RegularExpressionValidator ErrorMessage="Solo números." ForeColor="Red" Display="Dynamic" ValidationExpression="^[0-9]+$" ControlToValidate="txtFiltroAvanzado" runat="server" />
+                                    <%}%>
                                     
-                                    <asp:TextBox ID="txtFiltroAvanzado" AutoPostBack="false" OnTextChanged="txtFiltro_TextChanged" placeholder="Buscar" CssClass="form-control" runat="server" />
 
                                 <%} else {%> 
 
