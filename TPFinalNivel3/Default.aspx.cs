@@ -31,5 +31,11 @@ namespace TPFinalNivel3
                 throw ex;
             }
         }
+
+        //protected void btnDetalles_Click(object sender, EventArgs e)
+        //{
+        //    //string id = ((Button)sender).CommandArgument;
+        //    //Response.Redirect("Favoritos.aspx?id=" + id, false);
+        //}
     }
 }

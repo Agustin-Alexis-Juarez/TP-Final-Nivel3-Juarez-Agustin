@@ -54,7 +54,7 @@
                                     <asp:TextBox ID="txtUrlImagen" CssClass="form-control" AutoPostBack="true" OnTextChanged="txtUrlImagen_TextChanged" runat="server" MaxLength="1000" />
                                 </div>
                                 <div class="d-flex mb-3">
-                                    <asp:Image ID="imgArticulo" CssClass="img-fluid mb-3 agregar-articulo__imagen" runat="server" />
+                                    <asp:Image ID="imgArticulo" CssClass="img-fluid mb-3 agregar-articulo__imagen" onerror="this.onerror=null; this.src='https://www.latinamericancargo.com/wp-content/themes/lac_tema_2023/assets/res/img/other/placeholder_img.jpg'" runat="server" />
                                 </div>
                         </ContentTemplate>
                     </asp:UpdatePanel>

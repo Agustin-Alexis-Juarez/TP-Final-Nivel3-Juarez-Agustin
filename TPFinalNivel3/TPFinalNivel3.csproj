@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="AgregarArticulo.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Detalles.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="EstiloCss\style.css" />
     <Content Include="Favoritos.aspx" />
@@ -94,6 +95,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detalles.aspx.cs">
+      <DependentUpon>Detalles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detalles.aspx.designer.cs">
+      <DependentUpon>Detalles.aspx</DependentUpon>
     </Compile>
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>

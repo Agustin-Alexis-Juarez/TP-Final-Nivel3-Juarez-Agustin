@@ -42,7 +42,7 @@
                        
                     </div>
                     <div class="d-flex mb-3">
-                        <asp:Image ID="imgImagen" class="perfil__imagen-perfil mb-3" ImageUrl="https://i.ytimg.com/vi/rC7U4-8Qy4A/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDYXhkqyfEwVe9FSPmXVAt7Dc2lPQ" runat="server" />
+                        <asp:Image ID="imgImagen" class="perfil__imagen-perfil mb-3" onerror="this.onerror=null; this.src='https://www.latinamericancargo.com/wp-content/themes/lac_tema_2023/assets/res/img/other/placeholder_img.jpg'" ImageUrl="https://i.ytimg.com/vi/rC7U4-8Qy4A/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDYXhkqyfEwVe9FSPmXVAt7Dc2lPQ" runat="server" />
                     </div>
 
                 </div>
