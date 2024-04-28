@@ -28,14 +28,15 @@ namespace TPFinalNivel3
             catch (Exception ex)
             {
 
-                throw ex;
+                Session.Add("error", ex);
+                Response.Redirect("Error.aspx", false);
             }
         }
 
-        //protected void btnDetalles_Click(object sender, EventArgs e)
-        //{
-        //    //string id = ((Button)sender).CommandArgument;
-        //    //Response.Redirect("Favoritos.aspx?id=" + id, false);
-        //}
+        protected void btnDetalles_Click(object sender, EventArgs e)
+        {
+            string id = ((Button)sender).CommandArgument;
+            Response.Redirect("Detalles.aspx?id=" + id, false);
+        }
     }
 }

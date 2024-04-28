@@ -18,7 +18,7 @@
             </div>
             <div class="mb-auto">
                 <label for="">Contraseña</label>
-                <asp:TextBox CssClass="form-control txtLargo" ID="txtContraseña" runat="server" />
+                <asp:TextBox CssClass="form-control txtLargo" ID="txtContraseña" runat="server" TextMode="Password" />
                 <asp:RequiredFieldValidator ErrorMessage="La contraseña es requerida" ControlToValidate="txtContraseña" ForeColor="Red" runat="server" />
             </div>
 
