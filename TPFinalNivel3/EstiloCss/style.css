@@ -1,12 +1,49 @@
-﻿body{
+﻿body {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
     box-sizing: border-box;
 }
 
+
+
 .separador{
     margin-top:100px;
+}
+
+/*detalles*/
+.img-detalles{
+    object-fit:contain;
+    max-width:250px;
+    
+}
+.detalles__tarjeta {
+    background-color: #fff;
+    width:400px;
+    max-height: 800px;
+}
+
+@media(max-height: 741px){
+    .detalles__tarjeta{
+        height:500px;
+        overflow:scroll ;
+    }
+}
+
+.detalles__marca {
+    color: #999;
+    font-size:15px;
+}
+
+.detalles__boton-cerrar {
+    font-size: 25px;
+    background: none;
+    border: none;
+    margin-left: auto;
+    position: absolute;
+    right: 12px;
+    top: -2px;
+    width: 10px;
 }
 
 
@@ -323,4 +360,5 @@
         position: static;
         margin-bottom: 50px;
     }
+    
 }

@@ -13,7 +13,7 @@ namespace TPFinalNivel3
        
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!(Page is Login || Page is Default || Page is Registrar || Page is Error || Page is Detalles))
+            if (!(Page is Login || Page is Default || Page is Registrar || Page is Error))
             {
                 if (!Seguridad.sesionActiva(Session["usuario"]))
                     Response.Redirect("Login.aspx", false);

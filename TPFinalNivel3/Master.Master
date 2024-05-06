@@ -102,7 +102,7 @@
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-dark">
                                         <li><a class="dropdown-item" href="Perfil.aspx">Perfil</a></li>
-                                        <li><a class="dropdown-item" href="#">Favoritos</a></li>
+                                        <li><a class="dropdown-item" href="Favoritos.aspx">Favoritos</a></li>
                                          <%if (TPFinalNivel3.Seguridad.esAdmin(Session["usuario"]))
                                            { %>
                                                <li><a class="dropdown-item" href="ListaArticulos.aspx">Lista de articulos</a></li>
@@ -143,7 +143,6 @@
         </div>
 
         <div class="container">
-
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
