@@ -26,20 +26,29 @@ namespace TPFinalNivel3
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
+            lblcorreoExiste.Text = "";
             try
             {
                 Page.Validate();
                 if (!Page.IsValid)
                     return;
 
+
                 UsuarioDatos usuarioDatos = new UsuarioDatos();
                 Usuario usuarioNuevo = new Usuario();
 
-                usuarioNuevo.Email = txtEmail.Text;
-                usuarioNuevo.Contraseña = txtContraseña.Text;
-                usuarioNuevo.Id = usuarioDatos.registrar(usuarioNuevo);
+                if(!usuarioDatos.Existe(txtEmail.Text))
+                {
+                    usuarioNuevo.Email = txtEmail.Text;
+                    usuarioNuevo.Contraseña = txtContraseña.Text;
+                    usuarioNuevo.Id = usuarioDatos.registrar(usuarioNuevo);
               
-                Session.Add("usuario", usuarioNuevo);
+                    Session.Add("usuario", usuarioNuevo);
+                } else
+                {
+                    lblcorreoExiste.Text = "Ya existe una cuenta con este correo electrónico.";
+                    return;
+                }
 
                 Response.Redirect("Default.aspx", false);
             }

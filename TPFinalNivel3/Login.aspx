@@ -12,6 +12,7 @@
             <div class="mb-auto">
                 <h1 class="login-titulo">Iniciar Sesión</h1>
             </div>
+             
             <div class="mb-4">
                 <label for="">Correo electrónico</label>
                 <asp:TextBox CssClass="form-control txtLargo" ID="txtCorreo" runat="server" />
@@ -21,7 +22,8 @@
             <div class="mb-auto">
                 <label for="">Contraseña</label>
                 <asp:TextBox CssClass="form-control txtLargo" ID="txtContraseña" runat="server" TextMode="Password" />
-                <asp:RequiredFieldValidator ErrorMessage="La contraseña es requerida." ControlToValidate="txtContraseña" ForeColor="Red" runat="server" />
+                <asp:RequiredFieldValidator ErrorMessage="La contraseña es requerida." ControlToValidate="txtContraseña" ForeColor="Red" runat="server" Display="Dynamic" />
+                 <asp:Label Text="" id="lblNoExiste" ForeColor="red" runat="server" />
             </div>
 
             <div class="mb-auto">

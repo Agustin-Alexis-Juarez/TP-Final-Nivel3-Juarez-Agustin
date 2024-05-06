@@ -25,6 +25,7 @@ namespace TPFinalNivel3
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
+            lblNoExiste.Text = "";
             UsuarioDatos datos = new UsuarioDatos();
             Usuario usuario = new Usuario();
             try
@@ -42,8 +43,8 @@ namespace TPFinalNivel3
                 }
                 else
                 {
-                    Session.Add("error", "Correo Electrónico o contraseña incorrectos.");
-                    Response.Redirect("Error.aspx", false);
+                    lblNoExiste.Text = "Correo Electrónico o contraseña incorrectos.";
+                    return;
                 }
             }
             catch (Exception ex)

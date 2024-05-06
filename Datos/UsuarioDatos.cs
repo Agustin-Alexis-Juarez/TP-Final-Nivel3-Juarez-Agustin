@@ -96,5 +96,32 @@ namespace Datos
                 datos.cerrarConexion();
             }
         }
+        public bool Existe(string email)
+        {
+
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("select email from USERS where email = @correo");
+                datos.setearParametros("@correo", email);
+                datos.ejecutarLectura();
+
+                while(datos.Lector.Read())
+                {
+                    return true;
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }
