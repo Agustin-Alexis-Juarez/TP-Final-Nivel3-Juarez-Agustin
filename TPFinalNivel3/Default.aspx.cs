@@ -50,7 +50,7 @@ namespace TPFinalNivel3
                     {
                         FavoritoDatos favDatos = new FavoritoDatos();
                         List<Favorito> fav = new List<Favorito>();
-                        fav = favDatos.ObtenerFavoritos(((Usuario)Session["usuario"]).Id.ToString(), id);
+                        fav = favDatos.ObtenerFavorito(((Usuario)Session["usuario"]).Id.ToString(), id);
 
                         if (fav.Count != 0)
                         {

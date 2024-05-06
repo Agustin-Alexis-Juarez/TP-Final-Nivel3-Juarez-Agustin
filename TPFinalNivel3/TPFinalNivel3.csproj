@@ -76,7 +76,6 @@
     <Content Include="EstiloCss\style.css" />
     <Content Include="Favoritos.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Js\scripts.js" />
     <Content Include="ListaArticulos.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Perfil.aspx" />

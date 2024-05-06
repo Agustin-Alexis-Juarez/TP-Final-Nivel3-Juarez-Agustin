@@ -9,7 +9,7 @@ namespace Datos
 {
     public class FavoritoDatos
     {
-       public List<Favorito> ObtenerFavoritos(string iduser, string idArt = "")
+       public List<Favorito> ObtenerFavorito(string iduser, string idArt = "")
         {
             List<Favorito> lista = new List<Favorito>();
             AccesoDatos datos = new AccesoDatos();
