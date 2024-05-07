@@ -66,14 +66,23 @@ namespace Datos
             }
         }
 
-        public void BorrarFavorito(Favorito fav)
+        public void BorrarFavorito(Favorito fav, int id = 0) 
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("delete from FAVORITOS where IdUser = @idUser and IdArticulo = @idArt");
-                datos.setearParametros("@idArt", fav.IdArticulo);
-                datos.setearParametros("@idUser", fav.IdUser);
+                if(id != 0)
+                {
+                    datos.setearConsulta("delete from FAVORITOS where IdArticulo = @idArt");
+                    datos.setearParametros("@idArt", id);
+                }
+                else
+                {
+                    datos.setearConsulta("delete from FAVORITOS where IdUser = @idUser and IdArticulo = @idArt");
+                    datos.setearParametros("@idArt", fav.IdArticulo);
+                    datos.setearParametros("@idUser", fav.IdUser);
+                }
+
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

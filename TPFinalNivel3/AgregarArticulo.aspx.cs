@@ -157,7 +157,13 @@ namespace TPFinalNivel3
 				int id = int.Parse(Request.QueryString["id"].ToString());
 
 				ArticuloDatos articuloDatos = new ArticuloDatos();
+				Favorito favorito = new Favorito();
+				FavoritoDatos favDatos	= new FavoritoDatos();
+				
 				articuloDatos.Borrar(id);
+				favDatos.BorrarFavorito(favorito, id);
+				
+
 
 				Response.Redirect("ListaArticulos.aspx", false);
 
